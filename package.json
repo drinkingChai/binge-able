@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "nodemon node_modules/mocha/bin/mocha test",
     "dev": "webpack -w & node-sass -w public/scss -o public/css & nodemon server.js --ignore src/ --ignore dist/ --ignore public/"
   },
   "keywords": [],
@@ -17,7 +18,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
     "express": "^4.16.2",
+    "mocha": "^4.0.1",
     "morgan": "^1.9.0",
     "node-sass": "^4.7.2",
     "react": "^16.2.0",
