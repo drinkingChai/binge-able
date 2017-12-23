@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon node_modules/mocha/bin/mocha test",
+    "test": "nodemon node_modules/mocha/bin/mocha tests",
     "dev": "webpack -w & node-sass -w public/scss -o public/css & nodemon server.js --ignore src/ --ignore dist/ --ignore public/"
   },
   "keywords": [],

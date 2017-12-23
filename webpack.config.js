@@ -17,7 +17,7 @@ module.exports = {
           loader: 'babel-loader',
           options: { extends: path.join(__dirname, '.babelrc') }
         },
-        exclude: /node_modules/,
+        exclude: /node_modules/
       }
     ]
   }
