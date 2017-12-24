@@ -1,0 +1,16 @@
+.imdb-rating {
+  display: inline-block;
+  & .inner {
+    display: flex;
+    & img {
+      align-self: center;
+      @include makesmall();    
+      margin-right: 10px;
+    }
+    & span {
+      color: #FFFFFF;
+      align-self: center;
+      font-size: 24px;
+    }
+  }
+}

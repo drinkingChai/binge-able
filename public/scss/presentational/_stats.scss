@@ -1,0 +1,20 @@
+.stats {
+  display: grid;
+  grid-gap: 15px;
+  justify-content: center;
+  justify-items: center;
+  padding: 15px;
+  background-color: #3F395C;
+  color: #FFFFFF;
+  & .stats-value {
+    background-color: #FF64F2;
+    border-radius: 100%;
+    width: 3.33em; 
+    height: 3.33em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    @include addshadow(1);
+  }
+}

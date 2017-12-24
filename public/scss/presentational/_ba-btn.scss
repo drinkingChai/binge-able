@@ -1,0 +1,11 @@
+.ba-btn {
+  border: solid 2px;
+  border-radius: 25px;
+  padding: 7px 14px;
+  cursor: pointer;
+  display: inline-block;
+  &.default {
+    border-color: #FF64F2;
+    color: #FF64F2;
+  }
+}

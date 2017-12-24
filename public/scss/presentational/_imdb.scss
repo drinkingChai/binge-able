@@ -1,0 +1,7 @@
+.imdb {
+  & img {
+    cursor: pointer;
+    @include makesmall();
+    @include addshadow(1);
+  }
+}
