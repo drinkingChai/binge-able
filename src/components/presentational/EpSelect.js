@@ -9,7 +9,7 @@ export default class EpSelect extends Component {
     this.setState(this.props)
   }
 
-  onSelect = i => {
+  toggle = i => {
     let { episodes } = this.state.vendorData
     episodes[i].available = !episodes[i].available
     this.setState(episodes)
@@ -26,7 +26,7 @@ export default class EpSelect extends Component {
             <span
               className={ `bubble ${ d.available ? 'filled' : '' }` }
               key={ i }
-              onClick={ () => !this.props.clickDisabled && this.onSelect(i) }></span>)
+              onClick={ () => !this.props.clickDisabled && this.toggle(i) }></span>)
         }
       </div>
     )
