@@ -2,32 +2,32 @@ import React, { Component } from 'react'
 
 export default class EpSelect extends Component {
   state = {
-    selected: {},
-    total: []
+    vendorData: { season: '', episodes: [] }
   }
 
   componentDidMount = () => {
-    let total = [], count = 0
-    while (count < this.props.vendorData.total) {
-      total.push('')
-      this.setState({ i: false })
-      count++
-    }
+    this.setState(this.props)
   }
 
-  onSelect = n => {
-
+  onSelect = i => {
+    let { episodes } = this.state.vendorData
+    episodes[i].available = !episodes[i].available
+    this.setState(episodes)
   }
 
   render = () => {
-
-    
+    let { season, episodes } = this.state.vendorData
 
     return (
       <div className='ep-select'>
-      {
-        total.map((b, i) => <span className='bubble' key={ i }></span>)
-      }
+        <span className='season-title'>SEASON { season }</span>
+        {
+          episodes.map((d, i) =>
+            <span
+              className={ `bubble ${ d.available ? 'filled' : '' }` }
+              key={ i }
+              onClick={ () => !this.props.clickDisabled && this.onSelect(i) }></span>)
+        }
       </div>
     )
   }

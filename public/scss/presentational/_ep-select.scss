@@ -1,14 +1,41 @@
 .ep-select {
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 5px;
+  grid-gap: 2px;
   width: fit-content;
+  position: relative;
+  margin: 20px 15px;
   & .bubble {
-    width: 50px;
-    height: 50px;
+    width: 2.6em;
+    height: 2.6em;
     background-color: #FFFFFF;
     display: inline-block;
     border-radius: 100%;
     cursor: pointer;
+    background: radial-gradient(#1DF2EA, #1DF2EA), radial-gradient(#FFFFFF, #FFFFFF);
+    background-position: 50%, 50%;
+    background-size: 0, 110%;
+    transition: background-size 300ms;
+    background-repeat: no-repeat;
+    &.filled {
+      background-size: 110%, 0;
+    }
+    z-index: 5;
   }
+  & .season-title {
+    position: absolute;
+    color: #FFFFFF;
+    top: -1.3em;
+    left: -.5em;
+    height: 4.2em;
+    // border-left: solid 2px #FFFFFF;
+    padding-left: .5em;
+    z-index: 4;
+  }
+}
+
+// temp
+.ep-container {
+  display: flex;
+  flex-wrap: wrap;
 }

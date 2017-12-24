@@ -13,8 +13,8 @@ class Test extends Component {
     return (
       <div>
         {
-          <MovieTest />
-          // <SourcesTest />
+          // <MovieTest />
+          <SourcesTest />
         }
       </div>
     )
