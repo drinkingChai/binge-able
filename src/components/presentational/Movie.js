@@ -22,7 +22,7 @@ export default function (props) {
 
           <div className='movie-stats'>
             <Stats label='HOURS' value={ data.hours } />
-            <Stats label='BINGE-ABILITY' value={ data.bingeability } />
+            <Stats label='BINGE-ABILITY' value={ data.bingeability || '%' } valueClass={ !data.bingeability ? 'red' : '' } />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 @mixin makesmall() {
-  width: 3.35em;
-  height: 3.35em;
+  width: 3.15em;
+  height: 3.15em;
   object-fit: scale-down;
   @content;
 }

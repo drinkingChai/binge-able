@@ -28,7 +28,7 @@ class Test extends Component {
       title: 'Sherlock',
       year: '2010',
       hours: '45',
-      bingeability: '%',
+      bingeability: null,
       plot: 'A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.',
       poster: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMWY3NTljMjEtYzRiMi00NWM2LTkzNjItZTVmZjE0MTdjMjJhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTQ4NTc5OTU@._V1_SX300.jpg',
       imdbRating: '9.2',
