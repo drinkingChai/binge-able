@@ -37,7 +37,7 @@ const MovieTest = () => {
         ]
       },
       {
-        name: 'Amazon',
+        name: 'Amazon Prime Video',
         logo: '/public/assets/vendor/amazon.png',
         seasons: [
           {

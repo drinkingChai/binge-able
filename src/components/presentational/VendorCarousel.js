@@ -5,7 +5,7 @@ import Button from './Button'
 
 export default class VendorCarousel extends Component {
   state = {
-    current: 0, vendorArray: []
+    current: 0, vendorArray: [{}]
   }
 
   componentDidMount = () => {
@@ -29,20 +29,23 @@ export default class VendorCarousel extends Component {
     const { current, vendorArray } = this.state
 
     return (
-      <div className='carousel-container'>
-        <Button label={ <i className="fas fa-chevron-left"></i> } onClick={ () => this.handleRotate('left') } />
-        <div className='carousel'>
-        {
-          vendorArray.map((vendor, i) => 
-            <div className={ `carousel-item ${i == current - 1 ? 'left' : i == current ? 'current' : i == current + 1 ? 'right' : 'hidden'}` } key={ i }>
-            <img
-              className='vendor-logo'
-              src={ vendor.logo } key={ i }/>
-            </div>
-          )
-        }
+      <div className='vendor-carousel'>
+        <div className='carousel-container'>
+          <Button label={ <i className="fas fa-chevron-left"></i> } onClick={ () => this.handleRotate('left') } />
+          <div className='carousel'>
+          {
+            vendorArray.map((vendor, i) => 
+              <div className={ `carousel-item ${i == current - 1 ? 'left' : i == current ? 'current' : i == current + 1 ? 'right' : 'hidden'}` } key={ i }>
+              <img
+                className='vendor-logo'
+                src={ vendor.logo } key={ i }/>
+              </div>
+            )
+          }
+          </div>
+          <Button label={ <i className="fas fa-chevron-right"></i> } onClick={ () => this.handleRotate('right') } />
         </div>
-        <Button label={ <i className="fas fa-chevron-right"></i> } onClick={ () => this.handleRotate('right') } />
+        <div className='vendor-name'>{ vendorArray[current].name }</div>
       </div>
     )    
   }

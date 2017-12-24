@@ -1,5 +1,18 @@
 $img-size: 5em;
 
+.vendor-carousel {
+  width: fit-content;
+}
+
+.vendor-name {
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+}
+
 .carousel-container {
   display: flex;
   & > * { align-self: center; }
