@@ -1,10 +1,11 @@
 .ba-btn {
   border: solid 2px;
   border-radius: 25px;
-  padding: 7px 14px;
+  padding: 12px 16px;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.25em;
+  font-size: 1em;
+  text-align: center;
   font-weight: 300;
   &.default {
     border-color: #FF64F2;

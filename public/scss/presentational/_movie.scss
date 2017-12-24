@@ -3,49 +3,48 @@
   background-color: #3F395C;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  min-width: 480px;
-  max-width: 480px;
+  min-width: 400px;
+  max-width: 400px;
   @include addshadow(1);
   & .movie-info {
     display: flex;
-    & .movie-text-stats {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      & .movie-text {
-        padding: 20px 20px 10px 20px;
-        display: grid;
-        grid-gap: 12px;
-        & h3 {
-          text-transform: uppercase;
-          text-align: center;
-          line-height: 1.2em;
-        }
-        & .year {
-        display: block;
+    height: 200px;
+    & .movie-text {
+      padding: 20px 20px 10px 20px;
+      display: grid;
+      grid-gap: 12px;
+      & h3 {
+        text-transform: uppercase;
         text-align: center;
-        font-size: .9em;
-        }
-        & p {
-          font-weight: 300;
-          line-height: 1.5em;
-        }
+        line-height: 1.2em;
       }
-      & .movie-stats {
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
-        & .red {
-          background-color: #FF6464;
-        }
+      & .year {
+      display: block;
+      text-align: center;
+      font-size: .9em;
+      }
+      & p {
+        font-weight: 300;
+        line-height: 1.5em;
       }
     }
   }
-  & .movie-links {
-    padding: 25px 55px 35px 55px;
+  & .movie-stats {
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    & > * { align-self: center; }
+    & .red {
+      background-color: #FF6464;
+    }
+  }
+  & .movie-links {
+    padding: 10px 0 0 0;
+    background-color: #2F2B45;
+    & .btn-container {
+      padding: 10px 20px 25px 20px;
+    }
+    & .ba-btn {
+      width: 100%;
+    }
   }
 }
