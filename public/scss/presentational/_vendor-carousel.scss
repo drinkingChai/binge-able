@@ -7,10 +7,10 @@ $img-size: 5em;
 .vendor-name {
   font-weight: 400;
   color: #FFFFFF;
-  text-transform: uppercase;
   width: 100%;
   text-align: center;
   padding: 15px 0;
+  text-transform: uppercase;
 }
 
 .carousel-container {
@@ -26,7 +26,7 @@ $img-size: 5em;
 
 .carousel {
   position: relative;
-  margin: 0 $img-size;  
+  margin: 0 3em;  
   display: inline-block;
   & .carousel-item {
     display: inline-block;
@@ -51,10 +51,10 @@ $img-size: 5em;
       }
     }
     &.right {
-      transform: scale(.8) translateX(-1em);
+      transform: scale(.8) translateX(-3em);
     }
     &.left {
-      transform: scale(.8) translateX(-$img-size);
+      transform: scale(.8) translateX(-$img-size + 2em);
     } 
   }
 }

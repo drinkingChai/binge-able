@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 // components
 import EpSelect from '../components/presentational/EpSelect'
 import VendorCarousel from '../components/presentational/VendorCarousel'
+import Sources from '../components/presentational/Sources'
 
 const MovieTest = () => {
   let sourcesData = {
@@ -73,12 +74,14 @@ const MovieTest = () => {
 
   return (
     <div style={{ backgroundColor: '#3F395C', padding: '30px' }}>
-      <div className='ep-container'>
-        <EpSelect vendorData={ sourcesData.vendors[0].seasons[0] } clickDisabled />
-        <EpSelect vendorData={ sourcesData.vendors[0].seasons[1] } />
-      </div>
+      <EpSelect seasonData={ sourcesData.vendors[0].seasons[0] } clickDisabled />
+      <EpSelect seasonData={ sourcesData.vendors[0].seasons[1] } />
 
       <VendorCarousel vendorArray={ [ sourcesData.vendors[0], sourcesData.vendors[1], sourcesData.vendors[2] ] } />
+
+      <div style={{ backgroundColor: '#211B39', padding: '30px' }}>
+        <Sources sourcesData={ sourcesData } />
+      </div>
       
     </div>
   )

@@ -2,21 +2,25 @@ import React, { Component } from 'react'
 
 export default class EpSelect extends Component {
   state = {
-    vendorData: { season: '', episodes: [] }
+    seasonData: { season: 0, episodes: [] }
   }
 
   componentDidMount = () => {
     this.setState(this.props)
   }
 
+  componentWillReceiveProps = nextProps => {
+    this.setState(nextProps)
+  }
+
   toggle = i => {
-    let { episodes } = this.state.vendorData
+    let { episodes } = this.state.seasonData
     episodes[i].available = !episodes[i].available
     this.setState(episodes)
   }
 
   render = () => {
-    let { season, episodes } = this.state.vendorData
+    let { season, episodes } = this.state.seasonData
 
     return (
       <div className='ep-select'>

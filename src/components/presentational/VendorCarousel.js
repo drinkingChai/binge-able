@@ -12,6 +12,10 @@ export default class VendorCarousel extends Component {
     this.setState(this.props)
   }
 
+  componentWillReceiveProps = nextProps => {
+    this.setState(nextProps)
+  }
+
   handleRotate = direction => {
     let { current, vendorArray } = this.state
 
@@ -23,6 +27,7 @@ export default class VendorCarousel extends Component {
     }
 
     this.setState({ current })
+    this.props.onChange && this.props.onChange(current)
   }
 
   render = () => {
