@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 class GenresSelector extends Component {
-  state = { genres: [], filterActive: false, ddActive: false }
+  state = { genres: [], ddActive: false }
 
   componentDidMount = () => {
     let genres = this.props.genres.map(genre => ({ label: genre, selected: false }))
@@ -9,28 +9,33 @@ class GenresSelector extends Component {
   }
 
   toggleGenre = idx => {
-    let { genres, filterActive } = this.state
+    let { genres } = this.state
     genres[idx].selected = !genres[idx].selected 
-    if (genres[idx].selected) filterActive = true
-    else {
-      for (let i = 0; i < genres.length; i++) {
-        if (genres[i].selected) {
-          filterActive = true
-          break
-        } else filterActive = false
-      }
-    }
-    this.setState({ genres, filterActive })
+    this.setState({ genres })
   }
 
   toggleDropdown = () => {
     let { ddActive } = this.state
     ddActive = !ddActive
     this.setState({ ddActive })
+
+    if (ddActive) {
+      document.addEventListener('click', this.handleEvent)
+    } else {
+      document.removeEventListener('click', this.handleEvent)
+    }
+  }
+
+  handleEvent = e => {
+    let inDD = this.node.contains(e.target)
+    if (!inDD) {
+      document.removeEventListener('click', this.handleEvent)
+      this.setState({ ddActive: false })
+    }
   }
 
   render = () => {
-    let { genres, filterActive, ddActive } = this.state
+    let { genres, ddActive } = this.state
     let allSelected = true 
     for (let i = 0; i < genres.length; i++) {
       if (!genres[i].selected) {
@@ -38,12 +43,14 @@ class GenresSelector extends Component {
         break
       }
     } 
-    if (allSelected) ddActive = false
+    if (allSelected) {
+      ddActive = false
+      document.removeEventListener('click', this.handleEvent)
+    }
 
     return (
       <div className='genres-selector'>
-        { /*<div className={ `selected ${filterActive && 'filter-active'}` }>*/}
-        <div className={ 'selected filter-active' }>
+        <div className='selected'>
         {
           genres.map((genre, i) =>
             <div className={ `genre-label ${genre.selected ? 'selected' : 'hidden'}` } key={ i } onClick={ () => this.toggleGenre(i) } >
@@ -53,7 +60,7 @@ class GenresSelector extends Component {
           <span className='toggle-dd' onClick={ this.toggleDropdown }><i className="fas fa-chevron-down"></i></span>
         </div>
 
-        <div className={ `selector ${ddActive && 'dd-active' || 'dd-hidden'}` }>
+        <div className={ `selector ${ddActive && 'dd-active' || 'dd-hidden'}` } ref={ node => this.node = node }>
         {
           genres.map((genre, i) =>
             <div className={ `genre-label ${genre.selected ? 'hidden' : 'available'}` } key={ i } onClick={ () => this.toggleGenre(i) } >
