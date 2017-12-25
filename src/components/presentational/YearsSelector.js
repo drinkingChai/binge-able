@@ -55,7 +55,7 @@ class YearDD extends Component {
 
     return (
       <div className='year'>
-        <Button label={ current } className='ba-btn default genre-label' onClick={ this.toggleDropdown } />
+        <Button label={ current } className={ `ba-btn default genre-label ${ddActive && 'place-above'}` } onClick={ this.toggleDropdown } />
         <div className={ `year-dd ${ddActive && 'dd-active' || ''}` } ref={ node => this.node = node }>
         {
           years.map((y, i) => <div onClick={ () => this.selectYear(i) } key={ i }>{ y }</div>)

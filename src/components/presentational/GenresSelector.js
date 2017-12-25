@@ -67,7 +67,7 @@ class GenresSelector extends Component {
             { genre.label }
             </div>)
         }
-          <span className='toggle-dd' onClick={ this.toggleDropdown }><span className='x'>x</span></span>
+          { /*<span className='toggle-dd' onClick={ this.toggleDropdown }><span className='x'>x</span></span>*/}
         </div>
       </div>
     )

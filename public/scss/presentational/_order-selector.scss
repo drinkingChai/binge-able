@@ -1,0 +1,25 @@
+.order-selector {
+  border-bottom: solid 2px #FF64F2;
+  padding-bottom: 5px;
+  width: fit-content;
+  position: relative;
+  color: #FF64F2;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  & .ba-btn {
+    width: 115px;
+    margin-right: 7px;
+  }
+  & .ba-btn, & .toggle-order {
+    position: relative;
+    &.place-above {
+      z-index: 50;
+    }
+  }
+}
+
+.order-dd {
+  width: 150px;
+}

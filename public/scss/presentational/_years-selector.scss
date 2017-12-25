@@ -17,6 +17,9 @@
     z-index: 5;
     position: relative;
     background-color: #211B39;
+    &.place-above {
+      z-index: 50;
+    }
   }
 }
 
@@ -33,7 +36,6 @@
   text-align: center;
   position: absolute;
   background-color: #211B39;
-  z-index: 3;
   top: 1em;
   padding: .5em;
   padding-top: 2em;
@@ -48,5 +50,6 @@
   &.dd-active {
     transform: translateY(0%);
     visibility: visible;
+    z-index: 10;
   }
 }

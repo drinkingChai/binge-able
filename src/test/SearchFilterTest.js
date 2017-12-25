@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
 const genres = [ 'action', 'thriller', 'drama', 'sci-fi', 'fantasy', 'documentary' ]
-const filters = [ 'genres', 'rating', 'release' ]
+const sort = [ 'genres', 'rating', 'release' ]
 const years = { min: '1995', max: '2017' }
 
 import GenresSelector from '../components/presentational/GenresSelector'
 import YearsSelector from '../components/presentational/YearsSelector'
+import SortSelector from '../components/presentational/SortSelector'
 
 class SearchFilterTest extends Component {
   render = () => {
@@ -15,6 +16,8 @@ class SearchFilterTest extends Component {
           <GenresSelector genres={ genres } />
           <br/>
           <YearsSelector />
+          <br/>
+          <SortSelector options={ sort } />
         </div>
       </div>
     )
