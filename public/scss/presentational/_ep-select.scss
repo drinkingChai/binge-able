@@ -1,7 +1,6 @@
 .ep-select {
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 2px;
+  display: flex;
+  flex-wrap: wrap;
   width: fit-content;
   position: relative;
   margin: 20px 15px;
@@ -9,7 +8,6 @@
     width: 2.6em;
     height: 2.6em;
     background-color: #FFFFFF;
-    display: inline-block;
     border-radius: 100%;
     cursor: pointer;
     background: radial-gradient(#1DF2EA, #1DF2EA), radial-gradient(#FFFFFF, #FFFFFF);
@@ -17,8 +15,15 @@
     background-size: 0, 110%;
     // transition: background-size 800ms;
     background-repeat: no-repeat;
+    color: #1DF2EA;
+    display: flex;
+    justify-content: center;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    & > * { align-self: center; }
     &.filled {
       background-size: 110%, 0;
+      color: #FFFFFF;
     }
     z-index: 5;
   }
@@ -28,6 +33,7 @@
     top: -1.5em;
     left: -.5em;
     height: 4.2em;
+    width: 6em;
     // border-left: solid 2px #FFFFFF;
     padding-left: .5em;
     z-index: 4;

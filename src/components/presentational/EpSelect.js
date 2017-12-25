@@ -30,7 +30,13 @@ export default class EpSelect extends Component {
             <span
               className={ `bubble ${ d.available ? 'filled' : '' }` }
               key={ i }
-              onClick={ () => !this.props.clickDisabled && this.toggle(i) }></span>)
+              onClick={ () => !this.props.clickDisabled && this.toggle(i) }>
+              { 
+                // d.available ?
+                // <i className="fas fa-check"></i> :
+                // <i className="fas fa-times"></i>
+              }
+            </span>)
         }
       </div>
     )

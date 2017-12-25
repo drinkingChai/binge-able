@@ -36,7 +36,7 @@ export default class VendorCarousel extends Component {
     return (
       <div className='vendor-carousel'>
         <div className='carousel-container'>
-          <Button label={ <i className="fas fa-chevron-left"></i> } onClick={ () => this.handleRotate('left') } />
+          <Button label={ <i className="fas fa-chevron-left"></i> } onClick={ () => this.handleRotate('left') } className='ba-btn default round' />
           <div className='carousel'>
           {
             vendorArray.map((vendor, i) => 
@@ -48,7 +48,7 @@ export default class VendorCarousel extends Component {
             )
           }
           </div>
-          <Button label={ <i className="fas fa-chevron-right"></i> } onClick={ () => this.handleRotate('right') } />
+          <Button label={ <i className="fas fa-chevron-right"></i> } onClick={ () => this.handleRotate('right') } className='ba-btn default round' />
         </div>
         <div className='vendor-name'>{ vendorArray[current].name }</div>
       </div>

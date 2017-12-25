@@ -1,0 +1,23 @@
+.counter {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  & input {
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    width: 70px;
+    outline: none;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  & .teal {
+    color: #1DF2EA;
+    border-color: #1DF2EA;
+  }
+}

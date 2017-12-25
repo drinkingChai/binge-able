@@ -11,4 +11,10 @@
     border-color: #FF64F2;
     color: #FF64F2;
   }
+  &.round {
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 // components
 import MovieTest from './MovieTest'
 import SourcesTest from './SourcesTest'
+import SurveyTest from './SurveyTest'
 
 class Test extends Component {
   componentDidMount = () => {
@@ -14,7 +15,8 @@ class Test extends Component {
       <div>
         {
           // <MovieTest />
-          <SourcesTest />
+          // <SourcesTest />
+          <SurveyTest />
         }
       </div>
     )
