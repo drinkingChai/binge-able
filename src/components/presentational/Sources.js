@@ -27,7 +27,7 @@ class Sources extends Component {
     return (
       <div className='sources panel'>
         <div className='sources-title'>
-          <h4>Sources</h4>
+          <h3>Sources</h3>
           <h3>{ sourcesData.title }</h3>
         </div>
 

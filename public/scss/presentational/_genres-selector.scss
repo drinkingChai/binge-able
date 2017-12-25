@@ -1,0 +1,66 @@
+.genres-selector {
+  position: relative;
+}
+
+.selector, .selected {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+  padding-right: 1em;
+  color: #FF64F2;
+  position: relative;
+  min-height: 1.3em;
+  & > div {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  &.filter-active {
+    border-bottom: solid 2px #FF64F2;
+  }
+  & .toggle-dd {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.x {
+  font-family: 'Nunito', sans-serif;
+  margin-left: 5px;
+  font-size: 1.3em;
+}
+
+.selector {
+  background-color: #211B39;
+  position: absolute;
+  visibility: hidden;
+  transform: translateY(-100%);
+  padding: 15px;
+  width: 100%;
+  &.dd-active {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  & .toggle-dd {
+    margin-top: .5em;
+    right: 1em;
+  }
+}
+
+.genre-label {
+  border: solid 2px;
+  border-radius: 25px;
+  padding: 7px 12px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  text-align: center;
+  font-weight: 300;
+  border-color: #FF64F2;
+  color: #FF64F2;
+  display: flex;
+  justify-content: center;
+  & > * { align-self: center; }
+  &.hidden {
+    display: none;
+  }
+}

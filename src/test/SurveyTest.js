@@ -23,10 +23,10 @@ class SurveyTest extends Component {
     return (
       <div style={{ backgroundColor: '#3F395C', padding: '30px' }}>
         <div style={{ backgroundColor: '#211B39', padding: '30px' }}>
-
-            <SurveyOpening vendors={ vendors } title='Stranger Things' onNext='stuff' />
-            <br/>
-            <AddSeason title='Stranger Things' vendor={ vendors[0] } season='1' onNext='stuff' onPrev='stuff' />
+        
+          <SurveyOpening vendors={ vendors } title='Stranger Things' onNext='stuff' />
+          <br/>
+          <AddSeason title='Stranger Things' vendor={ vendors[0] } season='1' onNext='stuff' onPrev='stuff' />
 
         </div>
       </div>

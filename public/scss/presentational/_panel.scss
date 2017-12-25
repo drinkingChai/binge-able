@@ -1,2 +1,7 @@
 .panel {
+  /* Rectangle 4: */
+  background-image: linear-gradient(45deg, #1E0C69 0%, #311F7E 35%, #372B6C 72%, #2D206B 100%);
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  @include addshadow(1);
 }

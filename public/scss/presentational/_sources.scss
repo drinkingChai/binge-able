@@ -9,6 +9,7 @@
   }
   &-title {
     margin-bottom: 30px;
+    & > *:first-child { text-align: left; margin-bottom: 20px; }
   }
   & .btn-container {
     display: flex;
