@@ -6,18 +6,19 @@ export default class Counter extends Component {
   state = { count: 0 }
 
   handleChange = e => {
-    let newValue = this.state.count
+    let { count } = this.state
     if (typeof e == 'string') {
-      if (e == 'increment') newValue++
-      else if (e == 'decrement') newValue--
+      if (e == 'increment') count++
+      else if (e == 'decrement') count--
     }
     else {
-      newValue = +e.target.value
+      count = +e.target.value
     }
 
-    if (newValue >= 0) {
-      this.props.onChange && this.props.onChange(newValue)
-      this.setState({ count: newValue })
+    if (count >= 0) {
+      this.setState({ count: count }, () => {
+        this.props.onChange && this.props.onChange(this.state.count)
+      })
     } else {
       this.setState({ count: 0 })
     }

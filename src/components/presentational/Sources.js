@@ -25,7 +25,7 @@ class Sources extends Component {
     const currentVendor = sourcesData.vendors[+current]
 
     return (
-      <div className='sources'>
+      <div className='sources panel'>
         <div className='sources-title'>
           <h4>Sources</h4>
           <h3>{ sourcesData.title }</h3>

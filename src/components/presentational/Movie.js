@@ -10,7 +10,7 @@ export default function (props) {
   const { data } = props
 
   return (
-    <div className='movie'>
+    <div className='movie panel'>
       <div className='movie-info'>
         <Poster url={ data.poster } />
         <div className='movie-text'>

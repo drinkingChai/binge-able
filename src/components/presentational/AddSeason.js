@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import EpSelect from './EpSelect'
+import EpSelectMulti from './EpSelectMulti'
 import Counter from './Counter'
 import Button from './Button'
 
@@ -27,7 +28,7 @@ export default class AddSeason extends Component {
 
   render = () => {
     return (
-      <div className='survey add-season'>
+      <div className='survey add-season panel'>
         <div className='survey-title'>
           <h3>Survey</h3>
             <img className='vendor-logo' src={ this.props.vendor.logo }/>
@@ -38,10 +39,10 @@ export default class AddSeason extends Component {
           <p className='vendor-name'>ADD EPISODES</p>
           <Counter onChange={ this.updateEpCount } />
         </div>
-        <EpSelect seasonData={ this.state } />
+        <EpSelectMulti seasonData={ this.state } />
 
         <div className='survey-footer'>
-          <Button label='ADD SEASON' />
+          <Button label='ADD SEASON' onClick={ () => console.log(this.state) }/>
           <Button label='FINISHED' />
         </div>
         

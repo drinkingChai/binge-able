@@ -14,7 +14,7 @@ export default class SurveyOpening extends Component {
 
   render = () => {
     return (
-      <div className='survey opening'>
+      <div className='survey opening panel'>
         <div className='survey-title'>
           <h3>Survey</h3>
           <h3>{ this.props.title }</h3>
