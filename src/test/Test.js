@@ -16,16 +16,16 @@ class Test extends Component {
     return (
       <div>
         {
-          <SplashTest />
+          // <SplashTest />
         }
         {
-          <MovieTest />
+          // <MovieTest />
         }
         {
           // <SourcesTest />
         }
         {
-          // <SurveyTest />
+          <SurveyTest />
         }
         {
           // <SearchFilterTest />
