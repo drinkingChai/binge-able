@@ -7,7 +7,8 @@ const env = require('../env'),
       Tmdb = require('tmdb-v3'),
       tmdbv3 = new Tmdb({ apiKey: env.TMDB_API_KEY }),
       omdb = require('omdb'),
-      omdbjs = require('omdb-js')(env.OMDB_API_KEY)
+      omdbjs = require('omdb-js')(env.OMDB_API_KEY),
+      imdb = require('imdb-api')
 
 xdescribe("TMDB - Search", function() {
   it("can get configuration info", function(done) {
@@ -71,5 +72,17 @@ describe("OMDB - Search", function() {
       .catch(err => {
         done(err)
       })
+  })
+})
+
+describe('IMDB-API - Test episodes fetch', done => {
+  xit('fetches episodes', done => {
+    imdb.getById('tt4574334', { apiKey: env.OMDB_API_KEY })
+      .then(result => result.episodes())
+      .then(episodes => {
+        expect(episodes).to.be.an('array')
+        done()
+      })
+      .catch(done)
   })
 })
