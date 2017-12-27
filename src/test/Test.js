@@ -16,7 +16,10 @@ class Test extends Component {
     return (
       <div>
         {
-          // <MovieTest />
+          <SplashTest />
+        }
+        {
+          <MovieTest />
         }
         {
           // <SourcesTest />
@@ -26,9 +29,6 @@ class Test extends Component {
         }
         {
           // <SearchFilterTest />
-        }
-        {
-          <SplashTest />
         }
       </div>
     )

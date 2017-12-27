@@ -7,7 +7,8 @@
   color: #FFFFFF;
   font-weight: 300;
   & .stats-value {
-    background-color: #FF64F2;
+    // background-color: #FF64F2;
+    background-image: linear-gradient(-45deg, #E41AE3 0%, #7745C6 100%);
     border-radius: 100%;
     width: 50px; 
     height: 50px;

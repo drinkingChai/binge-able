@@ -58,7 +58,6 @@ $anim-time: 40000ms;
   margin-left: -25%;
   & img {
     margin: 15px;
-    // animation: pop-in $anim-time infinite;
   }
   & > .img-wrapper {
     width: 100%;
@@ -72,16 +71,40 @@ $anim-time: 40000ms;
   position: relative;
   z-index: 3;
   transform: scale(.9);
+  animation: popzero 1500ms forwards;
 }
 .img-size-1 {
   position: relative;
   z-index: 5;
+  animation: popone 1500ms forwards;
   transform: scale(1.2);
 }
 
 @for $i from 1 through 5 {
   .img-delay-#{$i} {
     animation-delay: calc(#{$i} * 100ms) !important;
+  }
+}
+
+@keyframes popzero {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(.9);
+    opacity: 1;
+  }
+}
+
+@keyframes popone {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
   }
 }
 
