@@ -1,0 +1,26 @@
+[
+  {
+    "header": "what is binge-able ?",
+    "content": [
+      "Binge-able is crowd source data on where shows can be binged on via streaming services such as",
+      "Netflix, Hulu, & Amazon."
+    ]
+  },
+  {
+    "header": "can i add to this ?",
+    "content": [
+      "Absolutely! Search for the show.",
+      "Click *Survey For New Data*.",
+      "Choose the streaming provider.",
+      "Select episodes available at this service.",
+      "Click Finish!"
+    ]
+  },
+  {
+    "header": "missing a service ?",
+    "content": [
+      "Send me an email with some details of the service at chaiAndTv@gmail.com.",
+      "Thank you!"
+    ]
+  }
+]

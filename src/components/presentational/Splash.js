@@ -1,10 +1,11 @@
 import React from 'react'
+import { animateScroll as scroll } from 'react-scroll'
 
 import posters from '../../../json/posters'
 import Button from './Button'
-import Search from './Search'
+import SearchInput from './SearchInput'
 
-export default function () {
+export default function ({ onSearch, onDiscover }) {
   return (
     <div className='splash'>
       <div className='images'>
@@ -28,9 +29,13 @@ export default function () {
         </div>
 
         <div className='search-discover'>
-          <Search />
+          <SearchInput onClick={ onSearch } />
           <div>OR</div>
-          <Button label='DISCOVER' />
+          <Button label='DISCOVER' onClick={ onDiscover } />
+        </div>
+
+        <div className='question'>
+          <Button label='?' className='ba-btn' onClick={ () => scroll.scrollTo(screen.height) } />
         </div>
       </div>
     </div>
