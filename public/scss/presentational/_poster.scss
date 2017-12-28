@@ -1,7 +1,8 @@
 .poster {
   display: inline-block;
   & img {
-    height: 200px;
+    // height: 200px;
+    height: 180px;
     object-fit: cover;
   }
 }

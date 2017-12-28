@@ -4,6 +4,7 @@ import { animateScroll as scroll } from 'react-scroll'
 
 import SplashWrapper from './containers/SplashWrapper'
 import SearchBar from './containers/SearchBar'
+import SearchResults from './containers/SearchResults'
 import About from './presentational/About'
 
 class Root extends Component {
@@ -12,8 +13,7 @@ class Root extends Component {
 
 
   handleSearch = input => {
-    scroll.scrollTo(screen.height)
-    this.props.history.push(`/search/?title=${input}`)
+    this.props.history.push(`/search?title=${input}`)
   }
 
   // add a scroll to top button on About.js
@@ -27,9 +27,10 @@ class Root extends Component {
           <Route path='/search' component={ SearchBar } />
         </div>
 
-        <Switch>
-          <Route path='/' component={ About } />
-        </Switch>
+        <div>
+          <Route exact path='/' component={ About } />
+          <Route path='/search' component={ SearchResults } />
+        </div>
       </div>
     )
   }

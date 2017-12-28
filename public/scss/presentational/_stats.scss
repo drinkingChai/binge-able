@@ -1,9 +1,9 @@
 .stats {
   display: grid;
-  grid-gap: 15px;
+  grid-gap: 10px;
   justify-content: center;
   justify-items: center;
-  padding: 15px;
+  padding: 5px;
   color: #FFFFFF;
   font-weight: 300;
   & .stats-value {
@@ -18,4 +18,12 @@
     justify-content: center;
     @include addshadow(1);
   }
+}
+
+.stats-value.hours {
+  background-image: linear-gradient(-45deg, #15F2BF 0%, #895AD3 100%);
+}
+
+.stats-value.binge-able {
+  background-image: linear-gradient(-180deg, #C4433D 0%, #CE62CF 97%);
 }
