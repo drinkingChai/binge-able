@@ -17,9 +17,7 @@ class SearchResults extends Component {
   render = () => {
     return (
       <div className='search-results'>
-        <div className='result-cont'>
-        { movietest.map((movie, i) => <Movie data={ movie } key={ i } />) }
-        </div>
+      { movietest.map((movie, i) => <Movie data={ movie } key={ i } />) }
       </div>
     )
   }

@@ -47,9 +47,9 @@ export default class SortSelector extends Component {
 
     return (
       <div ref={ node => this.node = node } className='order-selector'>
-        <Button label={ options[current] } className={ `ba-btn default genre-label ${ddActive && 'place-above'}` } onClick={ this.toggleDropdown } />
+        <Button label={ options[current] } className={ `ba-btn dd-label ${ddActive && 'place-above'}` } onClick={ this.toggleDropdown } />
         <span onClick={ this.toggleOrder } className={ `toggle-order toggle-dd ${ddActive && 'place-above'}` }><i className="fas fa-arrows-alt-v"></i></span>
-        <div className={ `order-dd year-dd ${ddActive && 'dd-active' || ''}` }>
+        <div className={ `order-dd year-dd ${ddActive && 'dd-active place-above' || ''}` }>
         {
           options.map((opt, i) => <div onClick={ () => this.handleSelect(i) } key={ i }>{ opt }</div>)
         }

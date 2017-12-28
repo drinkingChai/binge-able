@@ -1,16 +1,15 @@
 .order-selector {
-  border-bottom: solid 2px #FF64F2;
+  // border-bottom: solid 2px #242645;
   padding-bottom: 5px;
   width: fit-content;
   position: relative;
-  color: #FF64F2;
-  width: 150px;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   text-transform: uppercase;
   & .ba-btn {
-    width: 115px;
-    margin-right: 7px;
+    width: 160px;
+    padding-right: 50px;
   }
   & .ba-btn, & .toggle-order {
     position: relative;
@@ -18,8 +17,13 @@
       z-index: 50;
     }
   }
+  & .toggle-order {
+    position: absolute; 
+    right: 0;
+    bottom: 1.1em;
+  }
 }
 
 .order-dd {
-  width: 150px;
+  // width: 130px;
 }

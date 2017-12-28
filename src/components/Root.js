@@ -5,12 +5,12 @@ import { animateScroll as scroll } from 'react-scroll'
 import SplashWrapper from './containers/SplashWrapper'
 import SearchBar from './containers/SearchBar'
 import SearchResults from './containers/SearchResults'
+import Filter from './containers/Filter'
 import About from './presentational/About'
 
 class Root extends Component {
   componentDidMount = () => {
   }
-
 
   handleSearch = input => {
     this.props.history.push(`/search?title=${input}`)
@@ -23,12 +23,13 @@ class Root extends Component {
     return (
       <div>
         <div>
-          <Route path='/' render={ () => <SplashWrapper onSearch={ this.handleSearch } /> } />
+          <Route path='/' render={ () => <SplashWrapper onSearch={ this.handleSearch } onDiscover={ () => this.handleSearch('') } /> } />
           <Route path='/search' component={ SearchBar } />
         </div>
 
         <div>
           <Route exact path='/' component={ About } />
+          <Route path='/search' component={ Filter } />
           <Route path='/search' component={ SearchResults } />
         </div>
       </div>
