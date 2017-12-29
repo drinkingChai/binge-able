@@ -14,7 +14,7 @@ class SearchResults extends Component {
   componentDidMount = () => {
     this.setState(this.props)
     window.scrollTo(0, 0)
-    console.log(this.props)
+    // console.log(this.props)
   }
 
   componentWillReceiveProps = nextProps => {
