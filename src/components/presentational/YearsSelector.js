@@ -12,7 +12,7 @@ class YearDD extends Component {
         years = []
 
     while (yearFrom <= yearNow) {
-      years.push(yearFrom)
+      years.unshift(yearFrom)
       yearFrom++
     }
 

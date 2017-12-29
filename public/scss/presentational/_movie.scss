@@ -1,16 +1,19 @@
 .movie {
   color: #FFFFFF;
-  background-color: #3F395C;
-  // border-top-right-radius: 20px;
-  // border-bottom-left-radius: 20px;
-  min-width: 350px;
-  max-width: 350px;
+  width: 350px;
+  height: 400px;
+  position: relative;
   @include addshadow(1);
+  & .overlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-image: linear-gradient(0deg, rgba(39, 39, 67, 0.25) 0%, rgba(48, 49, 83, 0.25) 51%, rgba(59, 60, 103, 0.25) 96%);
+  }
   & .movie-info {
     display: flex;
     height: 200px;
     & .movie-text {
-      padding: 12px 12px 10px 12px;
+      padding: 30px 20px 10px 20px;
       display: grid;
       grid-gap: 2px;
       & h3 {
@@ -38,7 +41,6 @@
     }
   }
   & .movie-links {
-    // background-color: #2F2B45;
     border-bottom-left-radius: 20px;
     & .ba-btn {
       width: 100%;

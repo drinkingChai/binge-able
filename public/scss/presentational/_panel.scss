@@ -1,9 +1,2 @@
 .panel {
-  /* Rectangle 4: */
-  // background-image: linear-gradient(-179deg, #310844 2%, #3C0A75 100%);
-  background-image: linear-gradient(-206deg, #512164 0%, #1D2542 93%);
-  // background-image: linear-gradient(0deg, #272743 0%, #303153 51%, #3B3C67 96%);
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.18);
-  border-radius: 10px 10px 0 10px;
-  @include addshadow(1);
 }

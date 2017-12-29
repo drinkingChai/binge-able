@@ -5,6 +5,8 @@
   color: #000000;
   padding: 0 0 12px 0;
   position: relative;
+  @media screen and (max-width: 700px) {
+  }
   & input {
     color: #000000;
     border-color: #000000;
@@ -15,6 +17,9 @@
     position: absolute;
     left: 15px;
     top: 1.22em;
+    @media screen and (max-width: 700px) {
+      // &.large { display: none; }
+    }
   }
   & h4 {
     font-size: 1.5em;
