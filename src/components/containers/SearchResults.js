@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-// temp
+// ****** remove ****** //
 import movietest from '../../../json/movietest'
+// ****** remove ****** //
+
 import Movie from '../presentational/Movie'
 
 class SearchResults extends Component {

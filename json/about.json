@@ -10,7 +10,7 @@
     "header": "can i add to this ?",
     "content": [
       "Absolutely! Search for the show.",
-      "Click *Survey For New Data*.",
+      "Click *Sources > Survey For New Data*.",
       "Choose the streaming provider.",
       "Select episodes available at this service.",
       "Click Finish!"
@@ -19,7 +19,7 @@
   {
     "header": "missing a service ?",
     "content": [
-      "Send me an email with some details of the service at chaiAndTv@gmail.com.",
+      "Open a [ticket here](https://github.com/drinkingChai/binge-able) with some details of the service!",
       "Thank you!"
     ]
   }

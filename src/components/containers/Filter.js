@@ -7,7 +7,7 @@ import YearsSelector from '../presentational/YearsSelector'
 
 // ****** remove ****** //
 const genres = [ 'action', 'thriller', 'drama', 'sci-fi', 'fantasy', 'documentary' ]
-const sort = [ 'genres', 'rating', 'release' ]
+const sort = [ 'release', 'rating' ]
 // ****** remove ****** //
 
 class Filter extends Component {

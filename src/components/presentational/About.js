@@ -6,9 +6,11 @@ import about from '../../../json/about'
 export default class About extends React.Component {
   componentDidMount = () => {
     // open new window hack for markdown
-    this.node.querySelector('a').addEventListener('click', function (e) {
-      e.preventDefault()
-      window.open(this.href)
+    this.node.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault()
+        window.open(this.href)
+      })
     })
     // remove listener on dismount?
   }

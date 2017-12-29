@@ -40,10 +40,11 @@ describe("OMDB - Search", function() {
       })
   })
 
-  xit("can get details for a movie using imdbID", function(done) {
+ it("can get details for a movie using imdbID", function(done) {
     omdbjs.getSpecificMovie('', 'tt4574334', { type: 'series' })
       .then(result => {
         // result is a single OMDB API json object json matching the year and title, with "short" plot summary
+        console.log(result)
         expect(result).to.be.an('object')
         done()
       })

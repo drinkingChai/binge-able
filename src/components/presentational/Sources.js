@@ -42,8 +42,8 @@ class Sources extends Component {
         <VendorCarousel vendorArray={ sourcesData.vendors } onChange={ this.handleCarouselChange } />
 
         <div className='btn-container'>
-          <Button label='SURVEY NEW INFO' />
-          <Button label='CONFIRM CURRENT INFO' />
+          <Button label='SURVEY NEW INFO' onClick={ this.props.onSurvey } />
+          <Button label='CONFIRM CURRENT INFO' onClick={ this.props.onVerify } />
         </div>
       </div>
     )
