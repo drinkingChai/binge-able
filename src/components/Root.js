@@ -14,11 +14,11 @@ import { toggleSplash } from '../actions'
 
 class Root extends Component {
   componentDidMount = () => {
-    if (this.props.location.pathname !== '/') this.props.toggleSplash()
+    if (this.props.location.pathname !== '/' && this.props.splash) this.props.toggleSplash()
   }
 
   componentWillReceiveProps = nextProps => {
-    if (nextProps.location.pathname == '/') this.props.toggleSplash()
+    if (nextProps.location.pathname == '/' && !nextProps.splash) nextProps.toggleSplash()
   }
 
   handleSearch = input => {
@@ -33,7 +33,8 @@ class Root extends Component {
     return (
       <div>
         <div>
-          <Route path='/' render={ () => <SplashWrapper onSearch={ this.handleSearch } onDiscover={ () => this.handleSearch('') } /> } />
+          <Route exact path='/' render={ () => <SplashWrapper onSearch={ this.handleSearch } onDiscover={ () => this.handleSearch('') } /> } />
+          <Route exact path='/search' render={ () => <SplashWrapper onSearch={ this.handleSearch } onDiscover={ () => this.handleSearch('') } /> } />
           <Route path='/search' component={ SearchBar } />
           <Route path='/show' component={ SearchBar } />
         </div>
@@ -49,4 +50,5 @@ class Root extends Component {
   }
 }
 
-export default withRouter(connect(null, { toggleSplash })(Root))
+const mapState = ({ splash }) => ({ splash })
+export default withRouter(connect(mapState, { toggleSplash })(Root))

@@ -9,7 +9,7 @@ const SplashWrapper = ({ splash, location, history, onSearch, onDiscover }) => {
 
   return (
     <div
-      className={ `splash-wrapper${ location.pathname == '/search' && history.action == 'PUSH' ? ' close' : '' }` }>
+      className={ `splash-wrapper${ location.pathname != '/' && history.action == 'POP' ? ' close-no-anim' : location.pathname == '/search' ? ' close' : '' }` }>
       <Splash onSearch={ onSearch } onDiscover={ onDiscover } />
     </div>
   )
