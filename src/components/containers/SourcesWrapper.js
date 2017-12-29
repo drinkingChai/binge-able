@@ -16,27 +16,15 @@ class SourcesWrapper extends Component {
     }
   }
 
-  preventScroll = ev => {
-    // window.scrollTo(0, 0)
-    return
-  }
-
   componentDidMount = () => {
-    document.body.classList.add('modal-open')
     this.setState(this.props)
   }
+
   componentWillReceiveProps = nextProps => {
-    document.body.classList.add('modal-open')
     this.setState(nextProps)
   }
 
   componentWillUnmount = () => {
-    document.body.classList.remove('modal-open')
-  }
-
-  closeModal = () => {
-    this.props.history.goBack()
-    this.props.toggleModal()
   }
 
   render = () => {

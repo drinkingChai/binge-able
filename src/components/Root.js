@@ -42,7 +42,6 @@ class Root extends Component {
           <Route exact path='/' component={ About } />
           <Route path='/search' component={ Filter } />
           <Route path='/search' component={ SearchResults } />
-          <Route path='/show' component={ SearchResults } />
           <Route path='/show/:imdbID' component={ SourcesWrapper } />
         </div>
       </div>
