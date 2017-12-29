@@ -1,12 +1,7 @@
 import { combineReducers } from 'redux'
 
-const test = (state = {}, action) => {
-  switch(action.type) {
-    default:
-      return state
-  }
-}
+import modal from './modal'
 
 export default combineReducers({
-  test
+  modal
 })

@@ -35,7 +35,6 @@ $anim-time: 40000ms;
   }
 
   & .headlines {
-    // margin-bottom: 50px;
   }
   & .search-discover {
     padding-bottom: 50px;
@@ -47,7 +46,6 @@ $anim-time: 40000ms;
     & > * { 
       margin-bottom: 15px;
     }
-    // & div { font-size: 1.3em; }
   }
   & .question {
     position: absolute;
@@ -56,18 +54,24 @@ $anim-time: 40000ms;
     bottom: 0;
     font-size: 2.8em;
     font-weight: 700;
-    // animation: bounce 1500ms infinite;
     animation: bounce 3500ms ease-in-out infinite;
     & a { box-shadow: none; }
   }
 }
 
 .splash-wrapper {
+  width: 100vw;
   height: 100vh;
-  transition: height 450ms cubic-bezier(0.215, 0.61, 0.355, 1);
   &.close {
-    height: 0;
-    overflow: hidden;
+    animation: slideup 800ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    position: absolute;
+    z-index: 9999;
+    transform: translateY(-100%);
+  }
+  &.close-no-anim {
+    position: absolute;
+    z-index: 9999;
+    transform: translateY(-100%);
   }
 }
 
@@ -109,22 +113,22 @@ $anim-time: 40000ms;
 }
 
 @keyframes popzero {
-  0% {
+  from {
     transform: scale(0);
     opacity: 0;
   }
-  100% {
+  to {
     transform: scale(.9);
     opacity: 1;
   }
 }
 
 @keyframes popone {
-  0% {
+  from {
     transform: scale(0);
     opacity: 0;
   }
-  100% {
+  to {
     transform: scale(1.2);
     opacity: 1;
   }
@@ -151,5 +155,17 @@ $anim-time: 40000ms;
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }

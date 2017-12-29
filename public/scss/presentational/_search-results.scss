@@ -1,4 +1,5 @@
 .search-results {
+  // min-height: calc(100vh - 220px);
   padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, 350px);

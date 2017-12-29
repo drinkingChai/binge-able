@@ -16,6 +16,10 @@ class Sources extends Component {
     this.setState(this.props)
   }
 
+  componentWillReceiveProps = nextProps => {
+    this.setState(nextProps)
+  }
+
   handleCarouselChange = i => {
     this.setState({ current: i })
   }

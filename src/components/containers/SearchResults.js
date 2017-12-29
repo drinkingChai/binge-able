@@ -5,24 +5,34 @@ import { connect } from 'react-redux'
 import movietest from '../../../json/movietest'
 // ****** remove ****** //
 
-import Movie from '../presentational/Movie'
+import { toggleModal } from '../../actions'
+import Show from '../presentational/Show'
 
 class SearchResults extends Component {
+  state = { shows: [] }
+
   componentDidMount = () => {
+    this.setState(this.props)
+    window.scrollTo(0, 0)
     console.log(this.props)
   }
 
   componentWillReceiveProps = nextProps => {
+  }
 
+  showSources = imdbID => {
+    this.props.toggleModal()
+    this.props.history.push(`/show/${imdbID}`)
   }
 
   render = () => {
     return (
       <div className='search-results'>
-      { movietest.map((movie, i) => <Movie data={ movie } key={ i } />) }
+      { this.state.shows.map((show, i) => <Show data={ show } key={ i } onSourcesClick={ () => this.showSources(show.imdbID) } />) }
       </div>
     )
   }
 }
 
-export default connect()(SearchResults)
+const mapState = ({ shows }) => ({ shows: movietest })
+export default connect(mapState, { toggleModal })(SearchResults)

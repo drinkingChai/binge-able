@@ -8,9 +8,6 @@
   }
   
   padding: 30px;
-  .years-sort {
-    display: flex;
-  }
   & .genres-selector {
     margin-bottom: 20px;
     width: 100%;
@@ -18,5 +15,9 @@
   & .years-sort {
     display: grid;
     grid-template-columns: 300px 1fr;
+
+    @media screen and (max-width: 525px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
