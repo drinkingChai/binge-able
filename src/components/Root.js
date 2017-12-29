@@ -23,7 +23,7 @@ class Root extends Component {
 
   handleSearch = input => {
     this.props.history.push(`/search?title=${input}`)
-    setTimeout(() => { this.props.toggleSplash() }, 850)
+    setTimeout(() => { this.props.toggleSplash() }, 1200)
   }
 
   // add a scroll to top button on About.js
@@ -42,6 +42,7 @@ class Root extends Component {
           <Route exact path='/' component={ About } />
           <Route path='/search' component={ Filter } />
           <Route path='/search' component={ SearchResults } />
+          <Route path='/show' component={ SearchResults } />
           <Route path='/show/:imdbID' component={ SourcesWrapper } />
         </div>
       </div>
