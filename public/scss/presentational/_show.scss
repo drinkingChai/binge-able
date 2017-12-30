@@ -1,0 +1,52 @@
+.show-composite {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+}
+
+.show {
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 300ms;
+  &.hidden {
+    transform: translateX(-100%);
+  }
+  & > img {
+    width: 350px;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1;
+  }
+  .overlay {
+    position: absolute;
+    left: 0; bottom: 0;
+    z-index: 2;
+  }
+  .show-info {
+    background-color: rgba(0, 0, 0, .8);
+    padding: 1em;
+    display: grid;
+    grid-gap: 5px;
+    .imdb-rating {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.43em;
+      text-align: right;
+      grid-area: 1 / 2 / 2 / 4;
+    }
+    .genre {
+      font-size: .87em;
+      text-align: right;
+      display: block;
+      grid-area: 2 / 1 / 3 / 4;
+    }
+    p {
+      line-height: 1.25em;
+      grid-area: 3 / 1 / 4 / 4;
+      padding: 15px 0;
+    }
+  }
+}

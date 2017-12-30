@@ -1,0 +1,75 @@
+[
+  {
+    "title": "Stranger Things",
+    "released": "2016",
+    "hours": "140",
+    "bingeable": "100%",
+    "plot": "When a young boy disappears, his mother, a police chief, and his friends must confront terrifying forces in order to get him back.",
+    "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjUwMDgzOTg3Nl5BMl5BanBnXkFtZTgwNTI4MDk5MzI@._V1_SX300.jpg",
+    "imdbRating": "9.0",
+    "imdbID": "tt4574334",
+    "genre": "Drama, Fantasy, Horror",
+    "sources": [
+      {
+        "name": "Netflix",
+        "logo": "/public/assets/vendor/netflix.png",
+        "seasons": [
+          {
+            "season": "1",
+            "episodes": [
+              { "ep": 1, "available": true },
+              { "ep": 2, "available": true },
+              { "ep": 3, "available": true },
+              { "ep": 4, "available": true },
+              { "ep": 5, "available": true },
+              { "ep": 6, "available": false } ]
+          },
+          {
+            "season": 2,
+            "episodes": [
+              { "ep": 1, "available": true },
+              { "ep": 2, "available": true },
+              { "ep": 3, "available": false },
+              { "ep": 4, "available": true },
+              { "ep": 5, "available": true },
+              { "ep": 6, "available": false },
+              { "ep": 6, "available": false }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Amazon Prime Video",
+        "logo": "/public/assets/vendor/amazon.png",
+        "seasons": [
+          {
+            "season": 1,
+            "episodes": [
+              { "ep": 1, "available": true },
+              { "ep": 2, "available": true },
+              { "ep": 3, "available": true },
+              { "ep": 4, "available": true },
+              { "ep": 5, "available": true },
+              { "ep": 6, "available": false } ]
+          }
+        ] 
+      },
+      {
+        "name": "Hulu",
+        "logo": "/public/assets/vendor/hulu.png",
+        "seasons": [
+          {
+            "season": 3,
+            "episodes": [
+              { "ep": 1, "available": false },
+              { "ep": 2, "available": false },
+              { "ep": 3, "available": true },
+              { "ep": 4, "available": true },
+              { "ep": 5, "available": true },
+              { "ep": 6, "available": true } ]
+          }
+        ] 
+      }
+    ]
+  }
+]

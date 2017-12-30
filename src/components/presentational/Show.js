@@ -1,36 +1,26 @@
 import React from 'react'
 
-import Stats from './Stats'
 import Button from './Button'
-import IMDb from './IMDb'
 import IMDbRating from './IMDbRating'
-import Poster from './Poster'
 
 export default function (props) {
-  const { data, onSourcesClick } = props
+  const { info, onDetailsClick, hidden } = props
 
   return (
-    <div className='movie panel'>
-      <Poster url={ data.poster } />
+    <div className={ `show${ hidden ? ' hidden' : ''}` }>
+      <img src={ info.poster } />
       <div className='overlay'>
-        <div className='movie-info'>
-          <div className='movie-text'>
-            <h3>{ data.title }</h3>
-            <span className='year'>{ data.year }</span>
-            <p>{ data.plot.slice(0, 110) }{ data.plot.length > 110 ? '...' : ''}</p>
-          </div>
+        <div className='show-info'>
+          <h3>{ info.title }</h3>
+          <span className='genre'>{ info.genre }</span>
+          <p>{ info.plot.slice(0, 100) }{ info.plot.length > 100 ? '...' : ''}</p>
+          <IMDbRating rating={ info.imdbRating } />
         </div>
 
-        <div className='movie-links'>
-          <div className='movie-stats'>
-            <Stats label='HOURS' value={ data.hours } valueClass='hours' />
-            <Stats label='BINGE-ABLE' value={ data.bingeability || '%' } valueClass={ !data.bingeability ? 'x-binge-able' : 'binge-able' } />
-            <IMDbRating rating={ data.imdbRating } />
-            <IMDb imdbID={ data.imdbID }/>
-          </div>
-          <div className='btn-container'>
-            <Button label='SOURCES' onClick={ onSourcesClick } />
-          </div>
+        <div className='panel-bottom'>
+          <span>BINGE-ABLE { info.bingeable }</span>
+          <div className='divider'></div>
+          <Button label='DETAILS' onClick={ onDetailsClick } className='' />
         </div>
       </div>
     </div>

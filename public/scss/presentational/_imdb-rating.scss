@@ -1,16 +1,16 @@
 .imdb-rating {
-  position: relative;
-  & img {
-    align-self: center;
-    @include makesmall();    
+  display: flex;
+  align-items: center;
+  img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
   }
-  & span {
-    position: absolute;
-    color: #000000;
-    align-self: center;
-    font-size: 1.15em;
-    font-weight: 400;
-    left: 10px;
-    top: 29%;
+  span {
+    font-size: .86em;
+    padding-top: 2px;    
   }
+}
+.small {
+  font-size: .71em;
 }

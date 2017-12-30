@@ -20,6 +20,7 @@ xdescribe("TMDB - Search", function() {
 
   it("can search for movies", function(done) {
     tmdb.search.movie('stranger things', function(err,res) {
+      console.log(res)
       res.page.should.equal(1);
       done()
     })

@@ -25,7 +25,7 @@ class Test extends Component {
           // <SourcesTest />
         }
         {
-          <SurveyTest />
+          // <SurveyTest />
         }
         {
           // <SearchFilterTest />

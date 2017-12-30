@@ -1,2 +1,21 @@
 .panel {
+  &-bottom {
+    height: 40px; 
+    background-color: #131313;
+    color: #FFFFFF;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 15px;
+    overflow: hidden;
+    border-top: solid 2px #FFFFFF;
+  }
+}
+
+.divider {
+  background-color: #FFFFFF;
+  transform: rotate(30deg) translateY(-40%);
+  width: 2px;
+  height: 350%;
 }

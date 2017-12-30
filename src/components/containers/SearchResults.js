@@ -2,35 +2,22 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 // ****** remove ****** //
-import movietest from '../../../json/movietest'
+import showdata from '../../../json/showdata'
 // ****** remove ****** //
 
-import { toggleModal } from '../../actions'
-import Show from '../presentational/Show'
+import ShowComposite from '../presentational/ShowComposite'
 
 class SearchResults extends Component {
   state = { shows: [] }
 
-  componentDidMount = () => {
-    this.setState(this.props)
-  }
-
-  componentWillReceiveProps = nextProps => {
-  }
-
-  showSources = imdbID => {
-    this.props.toggleModal()
-    this.props.history.push(`/show/${imdbID}`)
-  }
-
   render = () => {
     return (
       <div className='search-results'>
-      { this.state.shows.map((show, i) => <Show data={ show } key={ i } onSourcesClick={ () => this.showSources(show.imdbID) } />) }
+        <ShowComposite data={ showdata[0] } />
       </div>
     )
   }
 }
 
-const mapState = ({ shows }) => ({ shows: movietest })
-export default connect(mapState, { toggleModal })(SearchResults)
+const mapState = ({ shows }) => ({ shows: showdata })
+export default connect(mapState)(SearchResults)

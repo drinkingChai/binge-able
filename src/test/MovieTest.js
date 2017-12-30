@@ -32,23 +32,10 @@ const MovieTest = () => {
   }
 
   return (
-    <div style={{ backgroundColor: '#3F395C', padding: '30px' }}>
-      <div style={{ display: 'flex' }}>
-        <Stats label='BINGE-ABILITY' value='100%'/>
-        <Stats label='HOURS' value='140'/>
-      </div>
-      <Button label='SOURCES' />
-      <Button label='SURVEY NEW INFO' />
-      <Button label='CONFIRM CURRENT INFO' />
-      <IMDb imdbID='tt4574334' />
-      <IMDbRating rating='9' />
-      <Poster url={ url } />
-
-      <div style={{ backgroundColor: '#211B39', padding: '30px' }}>
-        <Movie data={ movieData } />
-        <br/>
-        <Movie data={ movieData2 } />
-      </div>
+    <div style={{ backgroundColor: '#F0F0F0', padding: '30px' }}>
+      <Movie data={ movieData } />
+      <br/>
+      <Movie data={ movieData2 } />
     </div>
   )
 }
