@@ -3,6 +3,7 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
   color: #FFFFFF;
   padding: 25px;
+  width: 375px;
   & h3, & h4 {
     text-transform: uppercase;
     text-align: right;
@@ -39,10 +40,10 @@
 
 .sources-wrapper {
   /* full page bg: */
-  background-image: linear-gradient(-45deg, #281E45 0%, #170721 100%);
+  background: #F0F0F0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: calc(100vh - 56px);
   padding: 15px;
 }

@@ -4,6 +4,7 @@ import Modal from 'react-responsive-modal'
 
 // ****** remove ****** //
 import sourcestest from '../../../json/sourcestest'
+import movietest from '../../../json/movietest'
 // ****** remove ****** //
 
 import { toggleModal } from '../../actions'
