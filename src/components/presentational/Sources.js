@@ -19,21 +19,26 @@ class Sources extends Component {
     const { hidden, onBack, onSurvey } = this.props
     let source = sources[+current], seasons = source.seasons || []
 
-    // flatten season data
-    const episodes = seasons && seasons.reduce((arr, season) => {
-      let toConcat = [ { type: 'season', seasonNum: season.season } ] // season num
-      season.episodes.forEach(episode => toConcat.push({ type: 'episode', episodeNum: episode.ep, available: episode.available })) // ep num
-      arr = arr.concat(toConcat)
-      return arr
-    }, [])
-
-    console.log(episodes)
+    console.log(seasons)
 
     return (
       <div className={ `sources${ hidden ? ' hidden' : ''}` }>
         <div className='seasons'>
           <SourcesCarousel sources={ sources } />
-          <EpSelect episodes={ episodes } clickDisabled />
+          <div className='episodes-container'>
+          { seasons.map((season, i) => <EpSelect seasonNum={ season.seasonNum } episodes={ season.episodes } clickDisabled key={ i } />) }
+          </div>
+        </div>
+
+        <div className='legend'>
+          <div>
+            <span className='bubble filled'></span>
+            Available
+          </div>
+          <div>
+            <span className='bubble'></span>
+            Unavailable
+          </div>
         </div>
 
         <div className='panel-bottom'>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 export default class EpSelect extends Component {
-  state = { episodes: [] }
+  state = { episodes: [], seasonNum: 0 }
 
-  componentDidMount = () => { this.setState(this.props) }
-  componentWillReceiveProps = nextProps => { this.setState(nextProps) }
+  componentDidMount = () => { this.setState({ ...this.props }) }
+  componentWillReceiveProps = nextProps => { this.setState({ ...nextProps }) }
 
   toggle = i => {
     let { episodes } = this.state.seasonData
@@ -13,19 +13,18 @@ export default class EpSelect extends Component {
   }
 
   render = () => {
-    let { episodes } = this.state
+    let { episodes, seasonNum } = this.state
 
     return (
-      <div className='ep-select'>
+      <div className='ep-select-container'>
+        <div className='season-title'><span>SEASON { seasonNum }</span></div>
+        <div className='ep-select'>
         { episodes.map((d, i) =>
-          d.type == 'season' ?
-          <span
-            className='season-title'
-            key={ i }><span>SEASON { d.seasonNum }</span></span> :
           <span
             className={ `bubble ${ d.available ? 'filled' : '' }` }
             key={ i }
-            onClick={ () => !this.props.clickDisabled && this.toggle(i) }>{ d.episodeNum }</span>) }
+            onClick={ () => !this.props.clickDisabled && this.toggle(i) }>{ d.ep }</span>) }
+        </div>
       </div>
     )
   }

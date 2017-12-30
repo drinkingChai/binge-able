@@ -15,7 +15,7 @@
         "logo": "/public/assets/sources/netflix.png",
         "seasons": [
           {
-            "season": 1,
+            "seasonNum": 1,
             "episodes": [
               { "ep": 1, "available": true },
               { "ep": 2, "available": true },
@@ -44,7 +44,7 @@
             ]
           },
           {
-            "season": 2,
+            "seasonNum": 2,
             "episodes": [
               { "ep": 1, "available": true },
               { "ep": 2, "available": true },
@@ -61,7 +61,7 @@
         "logo": "/public/assets/sources/amazon.png",
         "seasons": [
           {
-            "season": 1,
+            "seasonNum": 1,
             "episodes": [
               { "ep": 1, "available": true },
               { "ep": 2, "available": true },
@@ -77,7 +77,7 @@
         "logo": "/public/assets/sources/hulu.png",
         "seasons": [
           {
-            "season": 3,
+            "seasonNum": 3,
             "episodes": [
               { "ep": 1, "available": false },
               { "ep": 2, "available": false },
