@@ -7,7 +7,6 @@ import SplashWrapper from './containers/SplashWrapper'
 import SearchBar from './containers/SearchBar'
 import SearchResults from './containers/SearchResults'
 import Filter from './containers/Filter'
-import SourcesWrapper from './containers/SourcesWrapper'
 import About from './presentational/About'
 
 import { toggleSplash } from '../actions'
@@ -43,7 +42,6 @@ class Root extends Component {
           <Route exact path='/' component={ About } />
           <Route path='/search' component={ Filter } />
           <Route path='/search' component={ SearchResults } />
-          <Route path='/show/:imdbID' component={ SourcesWrapper } />
         </div>
       </div>
     )

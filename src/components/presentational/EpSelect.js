@@ -1,17 +1,10 @@
 import React, { Component } from 'react'
 
 export default class EpSelect extends Component {
-  state = {
-    seasonData: { season: 0, episodes: [] }
-  }
+  state = { episodes: [] }
 
-  componentDidMount = () => {
-    this.setState(this.props)
-  }
-
-  componentWillReceiveProps = nextProps => {
-    this.setState(nextProps)
-  }
+  componentDidMount = () => { this.setState(this.props) }
+  componentWillReceiveProps = nextProps => { this.setState(nextProps) }
 
   toggle = i => {
     let { episodes } = this.state.seasonData
@@ -20,24 +13,19 @@ export default class EpSelect extends Component {
   }
 
   render = () => {
-    let { season, episodes } = this.state.seasonData
+    let { episodes } = this.state
 
     return (
       <div className='ep-select'>
-        <span className='season-title'>SEASON { season }</span>
-        {
-          episodes.map((d, i) =>
-            <span
-              className={ `bubble ${ d.available ? 'filled' : '' }` }
-              key={ i }
-              onClick={ () => !this.props.clickDisabled && this.toggle(i) }>
-              { 
-                // d.available ?
-                // <i className="fas fa-check"></i> :
-                // <i className="fas fa-times"></i>
-              }
-            </span>)
-        }
+        { episodes.map((d, i) =>
+          d.type == 'season' ?
+          <span
+            className='season-title'
+            key={ i }><span>SEASON { d.seasonNum }</span></span> :
+          <span
+            className={ `bubble ${ d.available ? 'filled' : '' }` }
+            key={ i }
+            onClick={ () => !this.props.clickDisabled && this.toggle(i) }>{ d.episodeNum }</span>) }
       </div>
     )
   }

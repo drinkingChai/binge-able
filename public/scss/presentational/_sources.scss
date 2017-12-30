@@ -1,49 +1,20 @@
 .sources {
-  background-image: linear-gradient(-179deg, #310844 2%, #3C0A75 100%);
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
-  color: #FFFFFF;
-  padding: 25px;
-  width: 375px;
-  & h3, & h4 {
-    text-transform: uppercase;
-    text-align: right;
-    margin-bottom: 10px;
-  }
-  &-title {
-    margin-bottom: 30px;
-    & > *:first-child { text-align: left; margin-bottom: 20px; }
-  }
-  & .btn-container {
-    display: flex;
-    flex-direction: column;
-    & > * {
-      width: fit-content;
-      margin: 7px auto;
-    }
-  }
-  & .vendor-carousel {
-    margin: 20px auto;
-    width: fit-content;
-  }
-}
-
-.ep-container {
-  width: fit-content;
-  margin: 0 auto;
+  background-color: #131313;
+  position: absolute;
+  top: 0;
+  transition: transform 300ms;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  transition: all 500ms;
-  & > * {
-    margin-bottom: 20px;
+  justify-content: space-between;
+  &.hidden { transform: translateX(-100%); }
+  .seasons {
+    display: grid;
+    justify-content: center;
+    padding: 20px;
   }
-}
+  .episodes {
 
-.sources-wrapper {
-  /* full page bg: */
-  background: #F0F0F0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: calc(100vh - 56px);
-  padding: 15px;
+  }
 }

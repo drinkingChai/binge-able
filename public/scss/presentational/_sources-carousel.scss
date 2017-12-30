@@ -1,31 +1,32 @@
-$img-size: 5em;
+$img-size: 2.27em;
 
-.vendor-carousel {
-  width: fit-content;
+.source-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.vendor-name {
+.source-name {
   font-weight: 400;
   color: #FFFFFF;
   width: 100%;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px 0 0 0;
   text-transform: uppercase;
 }
 
 .carousel-container {
   display: flex;
-  & > * { align-self: center; }
-  
+  align-items: center;
 }
 
 .carousel {
   position: relative;
-  margin: 0 3em;  
+  margin: 0 2em;  
   display: inline-block;
   & .carousel-item {
     display: inline-block;
-    transition: all 500ms;
+    // transition: all 500ms;
     &.current {
       position: relative;
       z-index: 5;
@@ -36,6 +37,7 @@ $img-size: 5em;
     &.right, &.left {
       position: absolute;
       z-index: 3;
+      display: none; // temp
       &:after {
         content: '';
         position: absolute;
@@ -54,9 +56,8 @@ $img-size: 5em;
   }
 }
 
-.vendor-logo {
+.source-logo {
   width: $img-size;
   height: $img-size;
   object-fit: cover;
-  border: solid 1px #1DF2EA;
 }

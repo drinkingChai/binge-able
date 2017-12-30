@@ -1,53 +1,45 @@
 import React, { Component } from 'react'
 
 import EpSelect from './EpSelect'
-import VendorCarousel from './VendorCarousel'
+import SourcesCarousel from './SourcesCarousel'
 import Button from './Button'
 
 class Sources extends Component {
   state = {
-    sourcesData: {
-      vendors: [{ seasons: [] }]
-    },
+    sources: [{}],
     current: 0
   }
 
-  componentDidMount = () => {
-    this.setState(this.props)
-  }
-
-  componentWillReceiveProps = nextProps => {
-    this.setState(nextProps)
-  }
-
-  handleCarouselChange = i => {
-    this.setState({ current: i })
-  }
+  componentDidMount = () => { this.setState({ sources: this.props.sources || [] }) }
+  componentWillReceiveProps = nextProps => { this.setState({ sources: nextProps.sources || [] }) }
+  handleCarouselChange = i => { this.setState({ current: i }) }
 
   render = () => {
-    const { sourcesData, current } = this.state
-    const currentVendor = sourcesData.vendors[+current]
+    const { sources, current } = this.state
+    const { hidden, onBack, onSurvey } = this.props
+    let source = sources[+current], seasons = source.seasons || []
+
+    // flatten season data
+    const episodes = seasons && seasons.reduce((arr, season) => {
+      let toConcat = [ { type: 'season', seasonNum: season.season } ] // season num
+      season.episodes.forEach(episode => toConcat.push({ type: 'episode', episodeNum: episode.ep, available: episode.available })) // ep num
+      arr = arr.concat(toConcat)
+      return arr
+    }, [])
+
+    console.log(episodes)
 
     return (
-      <div className='sources panel'>
-        <div className='sources-title'>
-          <h3>Sources</h3>
-          <h3>{ sourcesData.title }</h3>
+      <div className={ `sources${ hidden ? ' hidden' : ''}` }>
+        <div className='seasons'>
+          <SourcesCarousel sources={ sources } />
+          <EpSelect episodes={ episodes } clickDisabled />
         </div>
 
-        <div className='ep-container' style={{ height: `${ currentVendor.seasons.length * 80 }px` }}>
-        {
-          currentVendor.seasons.map((season, i) =>
-            <EpSelect seasonData={ season } key={ i } clickDisabled />
-          )
-        }
-        </div>
-
-        <VendorCarousel vendorArray={ sourcesData.vendors } onChange={ this.handleCarouselChange } />
-
-        <div className='btn-container'>
-          <Button label='SURVEY NEW INFO' onClick={ this.props.onSurvey } />
-          <Button label='CONFIRM CURRENT INFO' onClick={ this.props.onVerify } />
+        <div className='panel-bottom'>
+          <Button label='BACK' onClick={ onBack } className='' />
+          <div className='divider'></div>
+          <Button label='ADD SOURCE INFO' onClick={ onSurvey } className='' />
         </div>
       </div>
     )

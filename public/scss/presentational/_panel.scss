@@ -1,6 +1,6 @@
 .panel {
   &-bottom {
-    height: 40px; 
+    min-height: 40px; 
     background-color: #131313;
     color: #FFFFFF;
     display: grid;
@@ -9,13 +9,13 @@
     align-content: center;
     padding: 0 15px;
     overflow: hidden;
-    border-top: solid 2px #FFFFFF;
+    border-top: solid 1px rgba(255, 255, 255, .8);
   }
 }
 
 .divider {
   background-color: #FFFFFF;
   transform: rotate(30deg) translateY(-40%);
-  width: 2px;
+  width: 1px;
   height: 350%;
 }

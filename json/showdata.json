@@ -12,17 +12,36 @@
     "sources": [
       {
         "name": "Netflix",
-        "logo": "/public/assets/vendor/netflix.png",
+        "logo": "/public/assets/sources/netflix.png",
         "seasons": [
           {
-            "season": "1",
+            "season": 1,
             "episodes": [
               { "ep": 1, "available": true },
               { "ep": 2, "available": true },
               { "ep": 3, "available": true },
               { "ep": 4, "available": true },
               { "ep": 5, "available": true },
-              { "ep": 6, "available": false } ]
+              { "ep": 6, "available": true },
+              { "ep": 7, "available": true },
+              { "ep": 8, "available": true },
+              { "ep": 9, "available": false },
+              { "ep": 10, "available": false },
+              { "ep": 11, "available": false },
+              { "ep": 12, "available": true },
+              { "ep": 13, "available": true },
+              { "ep": 14, "available": true },
+              { "ep": 15, "available": true },
+              { "ep": 16, "available": true },
+              { "ep": 17, "available": true },
+              { "ep": 18, "available": true },
+              { "ep": 19, "available": true },
+              { "ep": 20, "available": true },
+              { "ep": 21, "available": true },
+              { "ep": 22, "available": true },
+              { "ep": 23, "available": true },
+              { "ep": 24, "available": true }
+            ]
           },
           {
             "season": 2,
@@ -32,7 +51,6 @@
               { "ep": 3, "available": false },
               { "ep": 4, "available": true },
               { "ep": 5, "available": true },
-              { "ep": 6, "available": false },
               { "ep": 6, "available": false }
             ]
           }
@@ -40,7 +58,7 @@
       },
       {
         "name": "Amazon Prime Video",
-        "logo": "/public/assets/vendor/amazon.png",
+        "logo": "/public/assets/sources/amazon.png",
         "seasons": [
           {
             "season": 1,
@@ -56,7 +74,7 @@
       },
       {
         "name": "Hulu",
-        "logo": "/public/assets/vendor/hulu.png",
+        "logo": "/public/assets/sources/hulu.png",
         "seasons": [
           {
             "season": 3,

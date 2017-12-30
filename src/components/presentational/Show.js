@@ -4,7 +4,7 @@ import Button from './Button'
 import IMDbRating from './IMDbRating'
 
 export default function (props) {
-  const { info, onDetailsClick, hidden } = props
+  const { info, onDetails, hidden } = props
 
   return (
     <div className={ `show${ hidden ? ' hidden' : ''}` }>
@@ -20,7 +20,7 @@ export default function (props) {
         <div className='panel-bottom'>
           <span>BINGE-ABLE { info.bingeable }</span>
           <div className='divider'></div>
-          <Button label='DETAILS' onClick={ onDetailsClick } className='' />
+          <Button label='DETAILS' onClick={ onDetails } className='' />
         </div>
       </div>
     </div>

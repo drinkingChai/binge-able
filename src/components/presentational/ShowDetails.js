@@ -28,7 +28,7 @@ export default function (props) {
       <div className='panel-bottom'>
         <Button label='BACK' onClick={ onBack } className='' />
         <div className='divider'></div>
-        <Button label='DETAILS' onClick={ onSources } className='' />
+        <Button label='VIEW SOURCES' onClick={ onSources } className='' />
       </div>
     </div>
   )

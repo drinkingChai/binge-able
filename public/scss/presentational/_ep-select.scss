@@ -1,38 +1,40 @@
 .ep-select {
   display: flex;
   flex-wrap: wrap;
+  // justify-content: center;
   width: fit-content;
   position: relative;
-  margin: 20px 15px;
+  padding-top: 30px;
+  max-height: 230px;
+  overflow-y: scroll;
   & .bubble {
-    width: 2.6em;
-    height: 2.6em;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     border-radius: 100%;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    margin-right: 3px;
-    margin-bottom: 3px;
-    border: solid 4px #5CFFF7;
-    // transition: all 200ms;
+    align-items: center;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: solid 3px #FFFFFF;
     &.filled {
-      background-image: linear-gradient(-180deg, #ADFFFD 0%, #1DF2EA 100%);
-      color: #FFFFFF;
+      background-color: #FFFFFF;
+      color: #000000;
       border-width: 0;
     }
     z-index: 5;
   }
   & .season-title {
-    position: absolute;
     color: #FFFFFF;
-    top: -1.5em;
-    left: -.5em;
-    height: 4.2em;
-    width: 6em;
-    // border-left: solid 2px #FFFFFF;
-    padding-left: .5em;
-    z-index: 4;
+    position: relative;
+    span {
+      position: absolute;
+      width: 6em;
+      top: -1em;
+    }
   }
 }
 
