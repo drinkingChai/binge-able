@@ -5,7 +5,7 @@ import Button from './Button'
 import IMDbRating from './IMDbRating'
 
 export default function (props) {
-  const { info, hidden, onBack, onSources } = props
+  const { info, hidden, onBack, onNext } = props
 
   return (
     <div className={ `show details${ hidden ? ' hidden' : ''}` }>
@@ -28,7 +28,7 @@ export default function (props) {
       <div className='panel-bottom'>
         <Button label='BACK' onClick={ onBack } className='' />
         <div className='divider'></div>
-        <Button label='VIEW SOURCES' onClick={ onSources } className='' />
+        <Button label='VIEW SOURCES' onClick={ onNext } className='' />
       </div>
     </div>
   )

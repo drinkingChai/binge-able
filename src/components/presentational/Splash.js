@@ -31,7 +31,7 @@ export default function ({ onSearch, onDiscover }) {
         <div className='search-discover'>
           <SearchInput onClick={ onSearch } />
           <div>OR</div>
-          <Button label='DISCOVER' onClick={ onDiscover } />
+          <Button label='DISCOVER' onClick={ onDiscover } className='ba-btn discover' />
         </div>
 
         <div className='question'>

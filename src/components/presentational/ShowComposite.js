@@ -23,6 +23,9 @@ export default class ShowComposite extends Component {
     console.log(data)
   }
 
+  // onNext pass ref of node, apply slide-right
+  // onBack pass ref, apply slide-left
+
   render = () => {
     const { page, current } = this.state
 
@@ -36,7 +39,7 @@ export default class ShowComposite extends Component {
           info={ this.props.data }
           hidden={ page[current] != 'details' }
           onBack={ () => this.swipe('left') }
-          onSources={ () => this.swipe('right') } />
+          onNext={ () => this.swipe('right') } />
         <Sources
           info={ this.props.data } // (unused) may use this for all comps
           sources={ this.props.data.sources } // using this for now

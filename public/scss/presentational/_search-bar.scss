@@ -3,7 +3,8 @@
   justify-content: center;
   align-items: center;
   color: #000000;
-  padding: 0 0 12px 0;
+  // padding: 0 0 12px 0;
+  height: 50px;
   position: relative;
   @media screen and (max-width: 400px) {
     flex-direction: column;
@@ -17,7 +18,7 @@
     color: inherit;
     position: absolute;
     left: 15px;
-    top: 1.22em;
+    top: 1.1em;
     @media screen and (max-width: 700px) {
       &.large { display: none; }
     }
@@ -45,7 +46,7 @@
     content: '';
     height: 5px;
     width: 100%;
-    background-image: linear-gradient(-225deg, #845EDC 29%, #44778C 100%);
+    // background-image: linear-gradient(-225deg, #845EDC 29%, #44778C 100%);
   }
   & input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #000000;

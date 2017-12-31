@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+import qs from 'query-string'
 
+import SearchInput from '../presentational/SearchInput'
 import GenresSelector from '../presentational/GenresSelector'
 import SortSelector from '../presentational/SortSelector'
 import YearsSelector from '../presentational/YearsSelector'
@@ -18,8 +21,11 @@ class Filter extends Component {
   }
 
   render = () => {
+    const { location, history } = this.props
+
     return (
       <div className='filter'>
+        <SearchInput input={ qs.parse(location.search).title || '' } onClick={ input => history.push(`/search?title=${input}`) } />
         <GenresSelector genres={ genres } />
 
         <div className='years-sort'>
@@ -31,4 +37,4 @@ class Filter extends Component {
   }
 }
 
-export default connect()(Filter)
+export default withRouter(connect()(Filter))

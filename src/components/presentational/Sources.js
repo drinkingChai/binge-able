@@ -37,8 +37,12 @@ class Sources extends Component {
     if (nextProps.isSurvey) this.setState({ sources: createEmptySources(nextProps.info.seasons, nextProps.services) })
     else this.setState({ sources: nextProps.sources || [] })
   }
-  handleCarouselChange = i => { this.setState({ current: i }) }
-  getSurveyData = () => this.props.onNext(this.state.sources)
+  handleCarouselChange = i => {
+    this.setState({
+      current: i,
+      sources: this.props.isSurvey ? createEmptySources(this.props.info.seasons, this.props.services) : this.state.sources }) // heavy
+  }
+  getSurveyData = () => this.props.onNext(this.state.sources[this.state.current])
 
   render = () => {
     const { sources, current } = this.state

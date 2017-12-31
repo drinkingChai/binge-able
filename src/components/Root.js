@@ -34,7 +34,7 @@ class Root extends Component {
         <div>
           <Route exact path='/' render={ () => <SplashWrapper onSearch={ this.handleSearch } onDiscover={ () => this.handleSearch('') } /> } />
           <Route exact path='/search' render={ () => <SplashWrapper onSearch={ this.handleSearch } onDiscover={ () => this.handleSearch('') } /> } />
-          <Route path='/search' component={ SearchBar } />
+          <Route path='/search' component={ SearchBar } /> { /* remove / rename to topbar */ }
           <Route path='/show' component={ SearchBar } />
         </div>
 

@@ -5,6 +5,21 @@ $anim-time: 40000ms;
   overflow: hidden;
   background-color: black;
   color: #FFFFFF;
+  & .ba-btn.discover {
+    background-color: transparent;
+    color: #232323;
+    position: relative;
+    z-index: 2;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%; height: 100%;
+      background-color: yellow;
+      top: 0; left: 0;
+      z-index: -1;
+      transform: skew(-15deg);
+    }
+  }
 
   & .overlay {
     position: absolute;

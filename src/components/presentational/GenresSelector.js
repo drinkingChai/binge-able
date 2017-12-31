@@ -53,7 +53,7 @@ class GenresSelector extends Component {
         <div className='selected'>
         {
           genres.map((genre, i) =>
-            <div className={ `genre-label ${genre.selected ? 'selected' : 'hidden'}` } key={ i } onClick={ () => this.toggleGenre(i) } >
+            <div className={ `genre-label ${genre.selected ? 'picked' : 'hidden'}` } key={ i } onClick={ () => this.toggleGenre(i) } >
               <span>{ genre.label } <span className='x'>{genre.selected && 'x'}</span></span> 
             </div>)
         }
