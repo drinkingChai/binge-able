@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Netflix",
+    "logo": "/public/assets/sources/netflix.png"
+  },
+  {
+    "name": "Amazon Prime Video",
+    "logo": "/public/assets/sources/amazon.png" 
+  },
+  {
+    "name": "Hulu",
+    "logo": "/public/assets/sources/hulu.png" 
+  }
+]

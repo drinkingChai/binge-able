@@ -4,29 +4,58 @@ import EpSelect from './EpSelect'
 import SourcesCarousel from './SourcesCarousel'
 import Button from './Button'
 
+// helper
+// add all services and all episodes
+const createEmptySources = (seasons, services) => {
+  return services.map(service => {
+    return {
+      name: service.name,
+      logo: service.logo,
+      seasons: seasons.map((season, i) => {
+        let epArray = []
+        for (let i = 0; i < season.episodes; i++) epArray.push({ ep: i, available: false })
+        return {
+          seasonNum: season.seasonNum,
+          episodes: epArray
+        }
+      })
+    }
+  })
+}
+
 class Sources extends Component {
   state = {
     sources: [{}],
     current: 0
   }
 
-  componentDidMount = () => { this.setState({ sources: this.props.sources || [] }) }
-  componentWillReceiveProps = nextProps => { this.setState({ sources: nextProps.sources || [] }) }
+  componentDidMount = () => {
+    if (this.props.isSurvey) this.setState({ sources: createEmptySources(this.props.info.seasons, this.props.services) })
+    else this.setState({ sources: this.props.sources || [] })
+  }
+  componentWillReceiveProps = nextProps => {
+    if (nextProps.isSurvey) this.setState({ sources: createEmptySources(nextProps.info.seasons, nextProps.services) })
+    else this.setState({ sources: nextProps.sources || [] })
+  }
   handleCarouselChange = i => { this.setState({ current: i }) }
+  getSurveyData = () => this.props.onNext(this.state.sources)
 
   render = () => {
     const { sources, current } = this.state
-    const { hidden, onBack, onSurvey } = this.props
+    const { hidden, onBack, onNext, backLabel, nextLabel, hideDir, clickDisabled, isSurvey } = this.props
     let source = sources[+current], seasons = source.seasons || []
 
-    console.log(seasons)
-
     return (
-      <div className={ `sources${ hidden ? ' hidden' : ''}` }>
+      <div className={ `sources${ hidden ? ` hidden${hideDir && `-${hideDir}` || ''}` : ''}` }>
         <div className='seasons'>
-          <SourcesCarousel sources={ sources } />
+          <SourcesCarousel sources={ sources } onChange={ this.handleCarouselChange } />
           <div className='episodes-container'>
-          { seasons.map((season, i) => <EpSelect seasonNum={ season.seasonNum } episodes={ season.episodes } clickDisabled key={ i } />) }
+          { seasons.map((season, i) =>
+            <EpSelect
+              seasonNum={ season.seasonNum }
+              episodes={ season.episodes }
+              clickDisabled={ isSurvey ? false : true }
+              key={ i } />) }
           </div>
         </div>
 
@@ -42,9 +71,9 @@ class Sources extends Component {
         </div>
 
         <div className='panel-bottom'>
-          <Button label='BACK' onClick={ onBack } className='' />
+          <Button label={ backLabel || 'BACK' } onClick={ onBack } className='' />
           <div className='divider'></div>
-          <Button label='ADD SOURCE INFO' onClick={ onSurvey } className='' />
+          <Button label={ nextLabel || 'ADD SOURCE INFO' } onClick={ isSurvey ? this.getSurveyData : onNext } className='' />
         </div>
       </div>
     )

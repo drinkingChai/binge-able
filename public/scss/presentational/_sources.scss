@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
   &.hidden { transform: translateX(-100%); }
+  &.hidden-right { transform: translateX(100%); }
   .seasons {
     display: grid;
     justify-content: center;
@@ -16,7 +17,7 @@
   }
   .episodes-container {
     overflow-y: scroll;
-    max-height: 180px;
+    height: 180px;
   }
   .legend {
     display: grid;

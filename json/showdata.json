@@ -88,6 +88,105 @@
           }
         ] 
       }
+    ],
+    "seasons": [
+      { "seasonNum": 1, "episodes": 7 },
+      { "seasonNum": 2, "episodes": 9 }
     ]
-  }
+  },
+  {
+    "title": "Stranger Things",
+    "released": "2016",
+    "hours": "140",
+    "bingeable": "100%",
+    "plot": "When a young boy disappears, his mother, a police chief, and his friends must confront terrifying forces in order to get him back.",
+    "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjUwMDgzOTg3Nl5BMl5BanBnXkFtZTgwNTI4MDk5MzI@._V1_SX300.jpg",
+    "imdbRating": "9.0",
+    "imdbID": "tt4574334",
+    "genre": "Drama, Fantasy, Horror",
+    "sources": [
+      {
+        "name": "Netflix",
+        "logo": "/public/assets/sources/netflix.png",
+        "seasons": [
+          {
+            "seasonNum": 1,
+            "episodes": [
+              { "ep": 1, "available": true },
+              { "ep": 2, "available": true },
+              { "ep": 3, "available": true },
+              { "ep": 4, "available": true },
+              { "ep": 5, "available": true },
+              { "ep": 6, "available": true },
+              { "ep": 7, "available": true },
+              { "ep": 8, "available": true },
+              { "ep": 9, "available": false },
+              { "ep": 10, "available": false },
+              { "ep": 11, "available": false },
+              { "ep": 12, "available": true },
+              { "ep": 13, "available": true },
+              { "ep": 14, "available": true },
+              { "ep": 15, "available": true },
+              { "ep": 16, "available": true },
+              { "ep": 17, "available": true },
+              { "ep": 18, "available": true },
+              { "ep": 19, "available": true },
+              { "ep": 20, "available": true },
+              { "ep": 21, "available": true },
+              { "ep": 22, "available": true },
+              { "ep": 23, "available": true },
+              { "ep": 24, "available": true }
+            ]
+          },
+          {
+            "seasonNum": 2,
+            "episodes": [
+              { "ep": 1, "available": true },
+              { "ep": 2, "available": true },
+              { "ep": 3, "available": false },
+              { "ep": 4, "available": true },
+              { "ep": 5, "available": true },
+              { "ep": 6, "available": false }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Amazon Prime Video",
+        "logo": "/public/assets/sources/amazon.png",
+        "seasons": [
+          {
+            "seasonNum": 1,
+            "episodes": [
+              { "ep": 1, "available": true },
+              { "ep": 2, "available": true },
+              { "ep": 3, "available": true },
+              { "ep": 4, "available": true },
+              { "ep": 5, "available": true },
+              { "ep": 6, "available": false } ]
+          }
+        ] 
+      },
+      {
+        "name": "Hulu",
+        "logo": "/public/assets/sources/hulu.png",
+        "seasons": [
+          {
+            "seasonNum": 3,
+            "episodes": [
+              { "ep": 1, "available": false },
+              { "ep": 2, "available": false },
+              { "ep": 3, "available": true },
+              { "ep": 4, "available": true },
+              { "ep": 5, "available": true },
+              { "ep": 6, "available": true } ]
+          }
+        ] 
+      }
+    ],
+    "seasons": [
+      { "seasonNum": 1, "episodes": 7 },
+      { "seasonNum": 2, "episodes": 9 }
+    ]
+  }  
 ]

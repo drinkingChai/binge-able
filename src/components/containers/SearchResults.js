@@ -13,7 +13,7 @@ class SearchResults extends Component {
   render = () => {
     return (
       <div className='search-results'>
-        <ShowComposite data={ showdata[0] } />
+      { showdata.map((data, i) => <ShowComposite data={ data } key={ i } />) }
       </div>
     )
   }

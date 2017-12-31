@@ -18,7 +18,9 @@ export default function (props) {
         </div>
 
         <div className='panel-bottom'>
-          <span>BINGE-ABLE { info.bingeable }</span>
+          <div className='bingeable'>
+            <span>{ info.bingeable }</span> BINGE-ABLE
+          </div>
           <div className='divider'></div>
           <Button label='DETAILS' onClick={ onDetails } className='' />
         </div>
